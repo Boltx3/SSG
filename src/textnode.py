@@ -18,14 +18,14 @@ class TextNode:
         self.text_type = text_type
         self.url = url
 
-#Returns tru if all properties of teo textnode objs are equal
-    def __eg__(self, other):
+#Returns true if all properties of textnode objs are equal
+    def __eq__(self, other):
         return (
                 self.text_type == other.text_type
                 and self.text == other.text
                 and self.url == other.url
-                )
+        )
 
 #Returns string representation of the textnode obj
     def __repr__(self):
-        return f"TextNode({self.text}, {self.text_type.value},{self.url})"
+        return f"TextNode({self.text}, {self.text_type.value}, {self.url})"
